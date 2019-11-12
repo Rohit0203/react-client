@@ -1,6 +1,5 @@
 body {
     box-sizing: border-box;
-    font-size: 22px;
     background-image: url("../images/background.jpg");
 }
 
@@ -12,9 +11,9 @@ h5 {
 
 }
 
-/* Main container Block */
+/* Main container
+ Block */
 .container {
-    width: 100%;
     display: flex;
     border: 1px solid;
     flex-wrap: wrap;
@@ -62,41 +61,40 @@ h5 {
     justify-content: flex-end;
 }
 
+.section
+{
+    display: flex;
+}
 /* Payment */
 
-.payment {
-    width: 60%;
+.saved_cards {
+    padding: 10px;
+    width: 30%;
 }
+
 .cards {
     display: flex;
     justify-content: space-between;
     margin: 30px;
-
-
 }
 
 .wallet,
 .new_card {
     margin: 20px;
-    margin-top: 40px;
+    margin-top: 30px;
     padding-bottom: 10px;
     border-bottom: 1px solid lightgray;
 }
 
+.card {
+    max-width: 350px;
+    width: 100%;
+}
 
 
 .saved_cards>h5 {
     font-size: 10px;
     line-height: 10px;
-}
-
-.saved_cards {
-    width: 200px;
-    padding: 20px;
-}
-
-.card {
-    width: 200px;
 }
 
 .saved_cards:hover {
@@ -110,12 +108,12 @@ h5 {
 }
 
 .form>input {
-    width: 40%;
+    width: 300px;
     height: 25px;
 }
 
 .subForm>input {
-    width: 19%;
+    width: 143px;
     height: 25px;
 }
 
@@ -124,9 +122,9 @@ h5 {
 }
 
 .form>.success-btn {
-    margin-top: 20px;
-    width: 42%;
-    line-height: 35px;
+    margin: 10px;
+    width: 310px;
+    line-height: 30px;
     background: rgba(90, 184, 3, 0.842);
 }
 
@@ -134,7 +132,6 @@ h5 {
 
 
 .cart {
-    width: 40%;
     background: whitesmoke;
 }
 
@@ -162,7 +159,7 @@ h5 {
 }
 
 .item_details>.product_name {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .item_details>.desc {
@@ -204,4 +201,76 @@ h5 {
 
 .bill_details>.panel {
     margin: 5px;
+}
+
+
+
+
+
+/* Responsiveness */
+
+@media(min-width:992px) {
+    .container {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .payment {
+        width: 60%;
+    }
+
+
+    .cart {
+        width: 40%;
+    }
+}
+
+@media(max-width:991px) and (min-width:768px) {
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .payment {
+        width: 50%;
+    }
+
+    .cart {
+        width: 50%;
+    }
+
+}
+@media(max-width:767px)
+{
+    .checkout_header >ul
+    {
+        display: none;
+    }
+}
+
+@media(max-width:600px)
+{
+    .section
+    {
+        flex-direction: column-reverse;
+    }
+    .wallet,.new_card
+    {
+        margin-top: 20px;
+    }
+}
+@media(max-width:400px)
+{
+    .cards
+    {
+        display: block;
+    }
+    .saved_cards
+    {
+        width: 100%;
+    }
+    .card
+    {
+        width:100%;
+    }
 }
