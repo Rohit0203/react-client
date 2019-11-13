@@ -15,6 +15,9 @@
     "lint": "npx eslint src/*.*",
     "lint:fix": "npx eslint src/*.* --fix"
   },
+  "hooks": {
+    "pre-commit": "npm run lint"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
