@@ -1,12 +1,25 @@
 import React from "react";
 
-import TextField from "../../components/TextField/TextField";
+import TextField from "../../components/TextField/index";
+import Slider from "../../components/Slider/index";
 import style from "../../components/TextField/style";
+import { align } from "../../components/Slider/style";
+import { banner, DEFAULT_BANNER_IMAGE } from "../../configs/constant";
 class TextFieldDemo extends React.Component {
   render() {
     const { label, dangerInput, inputDefault } = style;
     return (
       <>
+        <div style={({ width: "100%" }, align)}>
+          <Slider
+            altText={"DEFAULT_BANNER_IMAGE"}
+            banner={banner}
+            defaultBanner={DEFAULT_BANNER_IMAGE}
+            duration={2000}
+            height={200}
+            random={false}
+          ></Slider>
+        </div>
         <p style={label}>This is a Disabled Input</p>
         <TextField
           styles={inputDefault}
