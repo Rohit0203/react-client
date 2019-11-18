@@ -1,13 +1,13 @@
-export default {
+export const TextFieldStyle = {
   label: {
     fontWeight: 600
   },
   inputDefault: {
-    width: "99%",
+    width: "100%",
     border: "1px solid #5c606d",
     borderRadius: "4px",
-    height: "27px",
-    padding: "6px"
+    height: "40px",
+    fontSize: "20px"
   },
   dangerInput: {
     width: "99%",

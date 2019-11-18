@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import style from "./style";
+import { TextFieldStyle } from "./style";
 class TextField extends Component {
   render() {
-    const { dangerMessage } = style;
-    const { value, disabled, styles, error } = this.props;
+    const { dangerMessage } = TextFieldStyle;
+    const { onChange, error, styles } = this.props;
+
     return (
       <>
-        <input style={styles} type="text" value={value} disabled={disabled} />
+        <input style={styles} type="text" onChange={onChange} />
         <p style={dangerMessage}>{error}</p>
       </>
     );

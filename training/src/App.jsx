@@ -1,13 +1,15 @@
 import React from "react";
 
-import TextFieldDemo from "./pages/TextFieldDemo/index";
+// import TextFieldDemo from "./pages/TextFieldDemo/index";
+import InputDemo from "./pages/InputDemo/index";
 
-import style from "./components/TextField/style";
+// import style from "./components/TextField/style";
 
 function App() {
   return (
-    <div className="App" style={style.container}>
-      <TextFieldDemo />
+    <div className="App">
+      {/* <TextFieldDemo /> */}
+      <InputDemo />
     </div>
   );
 }
